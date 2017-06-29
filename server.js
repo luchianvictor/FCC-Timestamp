@@ -35,11 +35,15 @@ app.get('/:id', function(req,res) {
 	if ( Object.prototype.toString.call(id) === "[object Date]" ) {
     // it is a date
 	  	if ( !isNaN( id.getTime() ) ) { 
-	    
+	      //good date
 	  	  theUnix = id.getTime()/1000;
 	  	  theDate = monthNames[id.getMonth()] + " " + id.getDate() + ", " + id.getFullYear();
 	  	
-	  	}
+	  	} else {
+  	    // invalid date
+  	    theDate = null;
+	      theUnix = null;
+	    }
 	} else {
   	  // not a date
   	theDate = null;

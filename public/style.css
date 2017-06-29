@@ -15,13 +15,15 @@ body {
 
 h1 {
   font-weight: bold;
-  color: pink;
+  color: gold;
 }
 
 .bold {
   font-weight: bold;
 }
-
+a {
+  display:block;
+}
 p {
   max-width: 600px;
 }
